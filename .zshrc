@@ -59,7 +59,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+  git meteor osx
+  history extract brew
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -90,9 +91,11 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zc="vim ~/.zshrc"
+alias zc="code ~/.zshrc"
 alias copyzsh="scp -r ~/.zshrc ~/.oh-my-zsh "
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias lsop="sudo lsof -PiTCP -sTCP:LISTEN"
+alias netop="netstat -anp tcp | grep -i listen"
 
 unset LSCOLORS
 export CLICOLOR=1
